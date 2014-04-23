@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
   Display *dpy;
   XftFont *fn;
   XGlyphInfo ext;
-  FcChar8 *str; 
+  FcChar8 *str;
 
   char *name = argv[1];
   size_t len = strlen(argv[2]);
@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
 
   dpy = XOpenDisplay(NULL);
   fn = XftFontOpenName(dpy, 0, name);
- 
+
   if (fn == NULL) {
     printf("Font not found.\n");
     return 1;
@@ -38,6 +38,6 @@ int main(int argc, char** argv) {
   printf("%d\n", ext.height);
 
   XCloseDisplay(dpy);
-  free((void*)str); 
+  free((void*)str);
   return 0;
 }
