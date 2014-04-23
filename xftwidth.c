@@ -35,7 +35,8 @@ int main(int argc, char** argv) {
 
   XftTextExtents8(dpy, fn, str, (int)len, &ext);
   printf("%d\n", ext.width);
- 
+  printf("%d\n", ext.height);
+
   XCloseDisplay(dpy);
   free((void*)str); 
   return 0;
